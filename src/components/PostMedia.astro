@@ -1,0 +1,28 @@
+---
+// A post's image, or a centered wordmark placeholder (Apple-Newsroom style).
+// `class` sets the media box shape; `markClass` sizes the placeholder text.
+import type { Post } from '../lib/posts';
+
+interface Props {
+  post: Post;
+  class?: string;
+  markClass?: string;
+  eager?: boolean;
+}
+
+const { post, class: className, markClass = 'text-h3', eager = false } = Astro.props;
+const { image, imageAlt } = post.data;
+---
+
+<div class:list={['flex items-center justify-center overflow-hidden bg-white', className]}>
+  {image ? (
+    <img
+      src={image}
+      alt={imageAlt ?? ''}
+      loading={eager ? 'eager' : 'lazy'}
+      class="w-full h-full object-cover"
+    />
+  ) : (
+    <span class:list={['font-bold tracking-tight text-ink', markClass]}>gigcodelife</span>
+  )}
+</div>

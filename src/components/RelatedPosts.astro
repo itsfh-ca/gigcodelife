@@ -1,0 +1,36 @@
+---
+// "More from gigcodelife" list shown at the foot of an article.
+import type { Post } from '../lib/posts';
+import { formatDate } from '../lib/format';
+
+interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+{posts.length > 0 && (
+  <section class="mt-24">
+    <h2 class="text-h3 text-ink mb-6">More from gigcodelife</h2>
+    <div class="flex flex-col gap-8">
+      {posts.map((post) => (
+        <a
+          href={`/posts/${post.id}`}
+          class="group flex gap-6 items-center max-sm:flex-col-reverse max-sm:items-stretch"
+        >
+          <div class="flex flex-col gap-2 justify-center">
+            <span class="text-eyebrow uppercase text-gray-500">{formatDate(post.data.pubDate)}</span>
+            <h3 class="text-h3 text-ink group-hover:text-blue-500 transition-colors">{post.data.title}</h3>
+            <p class="text-body text-gray-500">{post.data.description}</p>
+          </div>
+          {post.data.image && (
+            <div class="flex-none w-50 max-sm:w-full aspect-4/3 rounded-card overflow-hidden bg-gray-100">
+              <img src={post.data.image} alt={post.data.imageAlt ?? ''} loading="lazy" class="w-full h-full object-cover" />
+            </div>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+)}

@@ -1,0 +1,19 @@
+---
+// Styled wrapper for rendered markdown. Keeps the long Tailwind Typography
+// modifier list out of the article page.
+---
+
+<div
+  class="prose prose-lg max-w-none text-ink
+    prose-headings:text-ink prose-headings:tracking-tight prose-headings:font-semibold
+    prose-p:text-ink prose-li:text-ink prose-li:marker:text-gray-400
+    prose-strong:text-ink prose-strong:font-semibold
+    prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline
+    prose-code:text-ink prose-code:bg-gray-100 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
+    prose-pre:bg-white prose-pre:border prose-pre:border-gray-200 prose-pre:text-ink
+    prose-blockquote:not-italic prose-blockquote:font-normal prose-blockquote:text-ink prose-blockquote:border-l-[3px] prose-blockquote:border-ink
+    prose-img:rounded-2xl prose-img:bg-gray-100
+    prose-em:text-gray-400"
+>
+  <slot />
+</div>

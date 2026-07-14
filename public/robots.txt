@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gigcodelife.com/sitemap-index.xml

@@ -1,0 +1,29 @@
+---
+import { SITE_NAME, FOOTER_COLUMNS, FOOTER_META_LINKS } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-gray-100 mt-24">
+  <div class="mx-auto max-w-300 px-8 max-sm:px-5 pt-12 pb-16">
+    <nav class="grid grid-cols-2 min-[720px]:grid-cols-4 gap-8" aria-label="Footer">
+      {FOOTER_COLUMNS.map((col) => (
+        <div class="flex flex-col gap-3">
+          <h4 class="text-caption font-semibold text-ink mb-1">{col.title}</h4>
+          {col.links.map((link) => (
+            <a href={link.href} class="text-caption text-gray-500 hover:text-ink">{link.label}</a>
+          ))}
+        </div>
+      ))}
+    </nav>
+
+    <div class="flex justify-between items-center mt-10 pt-6 border-t border-gray-100 text-caption text-gray-400 max-sm:flex-col max-sm:items-start max-sm:gap-4">
+      <span>Copyright © {year} {SITE_NAME}. All rights reserved.</span>
+      <div class="flex gap-6">
+        {FOOTER_META_LINKS.map((link) => (
+          <a href={link.href} class="text-gray-400 hover:text-ink">{link.label}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>

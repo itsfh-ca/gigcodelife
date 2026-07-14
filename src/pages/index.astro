@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
+import PostCard from '../components/PostCard.astro';
+import { getPublishedPosts } from '../lib/posts';
+import { SITE_DESCRIPTION } from '../consts';
+
+const posts = await getPublishedPosts();
+const [hero, ...rest] = posts;
+---
+
+<Layout description={SITE_DESCRIPTION}>
+  <main class="mx-auto max-w-300 px-6 max-sm:px-4 pt-12 max-sm:pt-8 pb-8 max-sm:pb-6">
+    <header class="mb-6">
+      <span class="text-eyebrow uppercase text-gray-500">Latest News</span>
+      <h1 class="text-display max-sm:text-h1 text-ink mt-2">Dispatches</h1>
+    </header>
+
+    {hero && <FeaturedPost post={hero} />}
+
+    {rest.length > 0 && (
+      <div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6">
+        {rest.map((post) => <PostCard post={post} />)}
+      </div>
+    )}
+
+    {posts.length > 1 && (
+      <div class="flex justify-center mt-16">
+        <a href="/rss.xml" class="text-small font-medium text-ink bg-gray-100 hover:bg-gray-200 rounded-full px-5.5 py-2.5 transition-colors">View Archive</a>
+      </div>
+    )}
+
+    {posts.length === 0 && <p class="text-gray-500">No posts yet.</p>}
+  </main>
+</Layout>

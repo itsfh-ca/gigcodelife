@@ -1,10 +1,13 @@
 ---
-title: "The Pay Guarantee Is a Floor, Not a Bonus"
-description: "Gig apps advertise earnings guarantees like free money. Read the fine print and the math, and most of them are guaranteeing you almost nothing."
-category: "Field Note"
-pubDate: 2026-06-28
-image: "https://picsum.photos/seed/gcl-guarantee/1200/800"
-imageAlt: "Abstract placeholder image"
+title: 'The Pay Guarantee Is a Floor, Not a Bonus'
+description: >-
+  Gig apps advertise earnings guarantees like free money. Read the fine print
+  and the math, and most of them are guaranteeing you almost nothing.
+category: Field Note
+pubDate: '2026-06-28'
+image: 'https://picsum.photos/seed/gcl-guarantee/1200/800'
+imageAlt: Abstract placeholder image
+draft: true
 ---
 
 The banner says "Earn at least $220 for 20 trips this weekend." It reads like a bonus. It is not a bonus. It's a floor — and the whole trick is that the floor is usually set just below where you'd have landed anyway.

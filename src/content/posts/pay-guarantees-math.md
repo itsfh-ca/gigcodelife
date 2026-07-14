@@ -7,7 +7,7 @@ category: Field Note
 pubDate: '2026-06-28'
 image: 'https://picsum.photos/seed/gcl-guarantee/1200/800'
 imageAlt: Abstract placeholder image
-draft: true
+draft: false
 ---
 
 The banner says "Earn at least $220 for 20 trips this weekend." It reads like a bonus. It is not a bonus. It's a floor — and the whole trick is that the floor is usually set just below where you'd have landed anyway.

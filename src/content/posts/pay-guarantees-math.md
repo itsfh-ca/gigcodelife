@@ -4,7 +4,7 @@ description: >-
   Gig apps advertise earnings guarantees like free money. Read the fine print
   and the math, and most of them are guaranteeing you almost nothing.
 category: Field Note
-pubDate: '2026-06-28'
+pubDate: '2026-06-25'
 image: 'https://picsum.photos/seed/gcl-guarantee/1200/800'
 imageAlt: Abstract placeholder image
 draft: false
